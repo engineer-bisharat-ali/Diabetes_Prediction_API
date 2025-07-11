@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Run using Gunicorn (production WSGI server)
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:8080"]
+CMD gunicorn app:app --bind 0.0.0.0:$PORT
